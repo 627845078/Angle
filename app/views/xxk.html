@@ -1,0 +1,11 @@
+<div class="gg{{uid}}">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li ng-repeat="x in datey" role="presentation" ng-class="{active:$index==0}"><a href="#{{$index}}{{uid}}" role="tab" data-toggle="tab">{{$index}}</a></li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div ng-repeat="x in datey" role="tabpanel" class="tab-pane" ng-class="{active:$index==0}" id="{{$index}}{{uid}}"><img ng-src="{{x.img}}" alt="..."></div>
+    </div>
+</div>

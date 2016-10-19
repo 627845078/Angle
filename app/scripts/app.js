@@ -32,6 +32,7 @@ angular
 			scope:true,
 			replace:true,
 			link:function(s,e,a){
+				e.carousel()
 				s.uid=a['uid']
 				var url=a['url']
 				$http({
@@ -39,6 +40,23 @@ angular
 					method:"get"	
 				}).success(function(e){
 					s.datex=e
+				})
+			}
+		}	
+	}).directive('xxk',function($http){
+		return{
+			restrict:"ECMA",
+			templateUrl:"views/xxk.html",
+			scope:true,
+			replace:true,	
+			link:function(s,e,a){
+				s.uid=a['uid']
+				var url=a['url']
+				$http({
+					url:"http://47.90.20.200:1510"+url,
+					method:"get"	
+				}).success(function(e){
+					s.datey=e
 				})
 			}
 		}	
