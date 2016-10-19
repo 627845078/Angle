@@ -1,0 +1,38 @@
+
+.ck(@w:150px,@h:20px){
+	width: @w;
+	height: @h;
+}
+.wangxu(@t:15px,@l:15px,@r:15px,@p1:6px,@p2:12px,@f:14px){
+	margin-top: @t;
+	margin-left: @l;
+	border-radius:@r;
+	padding:@p1 @p2;
+    font-size:@f;
+}
+.collapse p{
+	.ck(150px,auto);
+	float: right;
+}
+.navbar-header p{
+  display:none;
+}
+.collapse input[type="text"]{
+	.ck(150px,34px);
+	.wangxu(8px,10px,5px,6px,12px,14px);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-header p{
+  	.ck(100%,auto);
+	text-align:center;
+	display:block;
+  }
+  .collapse p{
+	display:none;
+}
+  .navbar-header input[type="text"]{
+	.ck(150px,34px);
+	.wangxu(8px,10px,5px,6px,12px,14px);
+  }
+}
